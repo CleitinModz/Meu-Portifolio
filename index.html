@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Cleitin Modz</title>
+    <link rel="stylesheet" href="estilozin.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 id="header-title">Cleitin Modz</h1>
+                <ul>
+                    <li><a href="#sobre" id="nav-sobre">Sobre</a></li>
+                    <li><a href="#projetos" id="nav-projetos">Projetos</a></li>
+                    <li><a href="#contato" id="nav-contato">Contato</a></li>
+                </ul>
+                <div class="menu-lateral">
+                    <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+                    <div class="menu-opcoes">
+                        <button onclick="changeLanguage('pt')" id="lang-pt">Português</button>
+                        <button onclick="changeLanguage('en')" id="lang-en">English</button>
+                        <button onclick="changeLanguage('es')" id="lang-es">Español</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-opcoes');
+            menu.classList.toggle('active');
+        }
+
+        function changeLanguage(language) {
+            const translations = {
+                pt: { /* Traduções omitidas para brevidade */ },
+                en: { /* Traduções omitidas para brevidade */ },
+                es: { /* Traduções omitidas para brevidade */ }
+            };
+
+            const elementsToTranslate = Object.keys(translations[language]);
+            elementsToTranslate.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = translations[language][id];
+                }
+            });
+        }
+    </script>
+
+    <style>
+        .menu-lateral {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: inline-block;
+            z-index: 1000;
+        }
+
+        .menu-btn {
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-opcoes {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .menu-opcoes.active {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .menu-opcoes button {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .menu-opcoes button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</body>
+</html>
+
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h2 id="hero-title" data-aos="fade-up">Bem-vindo! Eu sou Cleitin, programador e criador da Shogun 🚀</h2>
+            <p id="hero-desc" data-aos="fade-up" data-aos-delay="200">Transformando ideias em soluções digitais incríveis.</p>
+            <a 
+                href="https://wa.me/557599418597" 
+                class="btn" 
+                target="_blank" 
+                data-aos="fade-up" 
+                data-aos-delay="400" 
+                id="hero-btn">
+                Fale Comigo
+            </a>
+        </div>
+    </section>    
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 id="sobre-title" data-aos="fade-right">Sobre Mim</h2>
+            <p id="sobre-desc" data-aos="fade-right" data-aos-delay="200">Tenho 14 anos e sou apaixonado por programação! Desenvolvo sites, sistemas e APIs com tecnologias modernas. Meu objetivo é ajudar pessoas e empresas a alcançarem seus objetivos online.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <div class="container">
+            <h2 id="projetos-title" data-aos="fade-up">Meus Projetos</h2>
+            
+            <div class="projeto" data-aos="zoom-in">
+                <h3 id="projeto-1-title">Shogun</h3>
+                <p id="projeto-1-desc">Criação de um bot avançado com <strong>1.8K</strong> comandos para automatizar diversas tarefas e oferecer funcionalidades inovadoras. Perfeito para comunidades e servidores que buscam eficiência.</p>
+            </div>
+    
+            <div class="projeto" data-aos="zoom-in" data-aos-delay="200">
+                <h3 id="projeto-2-title">API Privada para Bot de WhatsApp</h3>
+                <p id="projeto-2-desc">Desenvolvimento de uma API privada para integração com bots de WhatsApp. Oferece segurança, velocidade e personalização para empresas e usuários que precisam de soluções exclusivas.</p>
+            </div>
+    
+            <div class="projeto" data-aos="zoom-in" data-aos-delay="400">
+                <h3 id="projeto-3-title">Site de Banca</h3>
+                <p id="projeto-3-desc">Criação de um site para ajudar minha mãe a gerenciar sua banca, tornando o trabalho mais organizado e automatizando algumas tarefas do dia a dia.</p>
+            </div>
+        </div>
+    </section>    
+
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 id="contato-title" data-aos="fade-left">Contato</h2>
+            <p id="contato-desc" data-aos="fade-left" data-aos-delay="200">Entre em contato comigo para discutirmos seu projeto!</p>
+            <ul data-aos="fade-left" data-aos-delay="400">
+                <li id="contato-info">WhatsApp: (55) 75 99941-8597</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cleitin Modz. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        const translations = {
+            pt: {
+                "header-title": "Cleitin Modz",
+                "nav-sobre": "Sobre",
+                "nav-projetos": "Projetos",
+                "nav-contato": "Contato",
+                "hero-title": "Bem-vindo! Eu sou Cleitin, programador e criador da Shogun 🚀",
+                "hero-desc": "Transformando ideias em soluções digitais incríveis.",
+                "hero-btn": "Fale Comigo",
+                "sobre-title": "Sobre Mim",
+                "sobre-desc": "Tenho 14 anos e sou apaixonado por programação! Desenvolvo sites, sistemas e APIs com tecnologias modernas. Meu objetivo é ajudar pessoas e empresas a alcançarem seus objetivos online.",
+                "projetos-title": "Meus Projetos",
+                "projeto-1-title": "Shogun",
+                "projeto-1-desc": "Criação de um bot avançado com 1.8K comandos para automatizar diversas tarefas e oferecer funcionalidades inovadoras.",
+                "projeto-2-title": "API Privada para Bot de WhatsApp",
+                "projeto-2-desc": "Desenvolvimento de uma API privada para integração com bots de WhatsApp. Oferece segurança, velocidade e personalização.",
+                "projeto-3-title": "Site de Banca",
+                "projeto-3-desc": "Criação de um site para ajudar minha mãe a gerenciar sua banca.",
+                "contato-title": "Contato",
+                "contato-desc": "Entre em contato comigo para discutirmos seu projeto!",
+                "contato-info": "WhatsApp: (55) 75 99941-8597",
+            },
+            en: {
+                "header-title": "Cleitin Modz",
+                "nav-sobre": "About",
+                "nav-projetos": "Projects",
+                "nav-contato": "Contact",
+                "hero-title": "Welcome! I am Cleitin, programmer and creator of Shogun 🚀",
+                "hero-desc": "Transforming ideas into amazing digital solutions.",
+                "hero-btn": "Contact Me",
+                "sobre-title": "About Me",
+                "sobre-desc": "I am 14 years old and passionate about programming! I develop websites, systems, and APIs with modern technologies.",
+                "projetos-title": "My Projects",
+                "projeto-1-title": "Shogun",
+                "projeto-1-desc": "Creation of an advanced bot with 1.8K commands to automate tasks and offer innovative features.",
+                "projeto-2-title": "Private API for WhatsApp Bot",
+                "projeto-2-desc": "Development of a private API for WhatsApp bots with security and customization.",
+                "projeto-3-title": "Banca Website",
+                "projeto-3-desc": "Created a website to help my mother manage her store.",
+                "contato-title": "Contact",
+                "contato-desc": "Contact me to discuss your project!",
+                "contato-info": "WhatsApp: +55 75 99941-8597",
+            },
+            es: {
+                "header-title": "Cleitin Modz",
+                "nav-sobre": "Sobre mí",
+                "nav-projetos": "Proyectos",
+                "nav-contato": "Contacto",
+                "hero-title": "¡Bienvenido! Soy Cleitin, programador y creador de Shogun 🚀",
+                "hero-desc": "Transformando ideas en soluciones digitales increíbles.",
+                "hero-btn": "Contáctame",
+                "sobre-title": "Sobre mí",
+                "sobre-desc": "Tengo 14 años y soy un apasionado de la programación. Desarrollo sitios web, sistemas y APIs.",
+                "projetos-title": "Mis Proyectos",
+                "projeto-1-title": "Shogun",
+                "projeto-1-desc": "Creación de un bot                 avanzado con 1.8K comandos para automatizar tareas y ofrecer características innovadoras.",
+                "projeto-2-title": "API Privada para Bot de WhatsApp",
+                "projeto-2-desc": "Desarrollo de una API privada para integrar bots de WhatsApp con seguridad y personalización.",
+                "projeto-3-title": "Sitio Web de Banca",
+                "projeto-3-desc": "Creación de un sitio web para ayudar a mi madre a gestionar su tienda.",
+                "contato-title": "Contacto",
+                "contato-desc": "¡Contáctame para discutir tu proyecto!",
+                "contato-info": "WhatsApp: +55 75 99941-8597",
+            },
+        };
+
+        function changeLanguage(language) {
+            const elementsToTranslate = Object.keys(translations[language]);
+            elementsToTranslate.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = translations[language][id];
+                }
+            });
+        }
+    </script>
+
+    <style>
+        .menu-lateral {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: inline-block;
+            z-index: 1000;
+        }
+
+        .menu-btn {
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-opcoes {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .menu-opcoes button {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .menu-opcoes button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .menu-btn:hover + .menu-opcoes,
+        .menu-opcoes:hover {
+            display: block;
+        }
+    </style>
+</body>
+</html>
